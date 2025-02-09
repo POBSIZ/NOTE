@@ -1,0 +1,35 @@
+.post-tags {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  color: #666;
+
+  .tags-label {
+    margin-right: 0.5em;
+  }
+
+  a {
+    color: #666;
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.post-categories {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-size: 0.8em;
+  color: #666;
+
+  .categories-label {
+    margin-right: 0.5em;
+  }
+
+  a {
+    color: #666;
+    &:hover {
+      color: #000;
+    }
+  }
+}
