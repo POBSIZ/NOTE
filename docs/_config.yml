@@ -15,10 +15,12 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
+permalink: pretty
+
 collections:
   posts:
     output: true
-    permalink: /:categories/:title/
+    permalink: /:categories/:title
 
 sass:
   style: compressed

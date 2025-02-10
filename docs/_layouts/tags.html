@@ -1,0 +1,100 @@
+---
+layout: default
+title: Tags
+permalink: /tags
+---
+
+<h1>Filter by Tag</h1>
+<div id="tag-filter">
+  <div class="filter-value">
+    <input
+      name="tag-key"
+      type="radio"
+      value="all"
+      id="tag-all"
+      checked
+      onchange="handleFilterChange(event)"
+    />
+    <label for="tag-all">#All</label>
+  </div>
+</div>
+
+<ul id="post-list">
+  <!-- JavaScript로 여기에 포스트 목록이 추가될 예정 -->
+</ul>
+
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const queryTag = urlParams.get("tag");
+
+  let selectedTag = "all";
+  let posts = [];
+
+  function createFilterValue(tag) {
+    const filterValue = document.createElement("div");
+    filterValue.classList.add("filter-value");
+
+    const radioInput = document.createElement("input");
+    radioInput.name = "tag-key";
+    radioInput.type = "radio";
+    radioInput.value = tag;
+    radioInput.id = `tag-${tag}`;
+    radioInput.addEventListener("change", handleFilterChange);
+
+    if (queryTag === tag) {
+      radioInput.checked = true;
+      selectedTag = tag;
+    }
+
+    const label = document.createElement("label");
+    label.htmlFor = radioInput.id;
+    label.innerText = "#" + tag[0].toUpperCase() + tag.slice(1);
+
+    filterValue.appendChild(radioInput);
+    filterValue.appendChild(label);
+
+    return filterValue;
+  }
+
+  // 게시글 목록을 출력하는 함수
+  function displayPosts(filterTag) {
+    const postList = document.getElementById("post-list");
+    postList.innerHTML = "";
+
+    posts
+      .filter((post) => filterTag === "all" || post.tags.includes(filterTag))
+      .forEach((post) => {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<a href="/NOTE${post.url}">${post.title}</a> (${post.date})`;
+        postList.appendChild(listItem);
+      });
+  }
+
+  async function fetchPosts() {
+    const response = await fetch("/NOTE/posts.json");
+    posts = await response.json();
+
+    // 태그 목록 생성
+    const tagSet = new Set();
+    posts.forEach((post) => post.tags.forEach((tag) => tagSet.add(tag)));
+
+    // 필터 목록 생성
+    const tagFilter = document.getElementById("tag-filter");
+    tagSet.forEach((tag) => {
+      tagFilter.appendChild(createFilterValue(tag));
+    });
+
+    // 초기 표시
+    displayPosts(selectedTag);
+  }
+
+  function handleFilterChange(event) {
+    if (event.target.checked) {
+      selectedTag = event.target.value;
+      displayPosts(selectedTag);
+    }
+  }
+
+  fetchPosts();
+</script>

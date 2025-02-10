@@ -1,0 +1,19 @@
+---
+layout: null
+---
+{% assign post_list = "" %}
+{% for post in site.posts %}
+  {% if post.is_index != true %}
+    {% assign filtered_tags = post.tags | where_exp: "tag", "tag != ''" %}
+    {% capture json_item %}
+      {
+        "title": "{{ post.title | escape }}",
+        "url": "{{ post.url }}",
+        "date": "{{ post.date | date: '%Y-%m-%d' }}",
+        "tags": [{{ filtered_tags | join: '", "' | prepend: '"' | append: '"' }}]
+      }
+    {% endcapture %}
+    {% assign post_list = post_list | append: json_item | append: "||" %}
+  {% endif %}
+{% endfor %}
+[{{ post_list | split: "||" | join: "," }}]
