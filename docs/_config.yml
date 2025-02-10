@@ -15,6 +15,16 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
+include:
+  - _posts
+
+exclude:
+  - node_modules
+  - vendor
+  - Gemfile
+
+future: true # 미래 날짜의 게시글을 표시하려면 true로 설정
+
 permalink: pretty
 
 collections:
