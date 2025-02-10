@@ -6,14 +6,19 @@ baseurl: "/NOTE"
 url: ""
 github_username: POBSIZ
 
-theme: minima
 plugins:
-  - jekyll-paginate
+  - jekyll-remote-theme
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-paginate
   - jekyll-sitemap
 
 collections:
   posts:
     output: true
     permalink: /:categories/:title/
+
+sass:
+  style: compressed
+  load_paths:
+    - _sass
