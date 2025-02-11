@@ -36,3 +36,5 @@ sass:
   style: compressed
   load_paths:
     - _sass
+
+google_analytics: G-S7P63BDB2V
