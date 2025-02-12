@@ -29,16 +29,16 @@ datetime: 2025-02-11T00:52:00
 **Jekyll**
 
 선정이유
-- [[Markdown]] 파일을 자동으로 [[Github Token]]로 변환 가능하다.
-- 초기 [[Github]] 개발자가 만든 [[Software]]이며 [[Github Pages]]에서 기본적으로 제공하는 정적 사이트 생성기이다.
+- Markdown 파일을 자동으로 Github Pages로 변환 가능하다.
+- 초기 Github 개발자가 만든 Software이며 Github Pages에서 기본적으로 제공하는 정적 사이트 생성기이다.
 - 커스텀이 자유롭다.
 - 참고할만한 정보가 많다
 
 ## 환경
 
-![[IMG_1719.jpeg]]
+![프로젝트 구조](IMG_1719.jpeg)
 
-1. 위의 "docs" 경로는 [[Jekyll]] 프로젝트의 폴더 경로이다.
+1. 위의 "docs" 경로는 Jekyll 프로젝트의 폴더 경로이다.
 2. 아래 "personal" 경로는 개인 기록을 저장해두는 경로이다.
 3. Vault를 Github repository와 iCloud에 올려둔 상태이다.
 
