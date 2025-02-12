@@ -17,6 +17,7 @@ plugins:
 
 include:
   - _posts
+  - assets
 
 exclude:
   - node_modules
