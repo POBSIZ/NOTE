@@ -49,12 +49,12 @@ function foo(n: number): number {
 함수를 즉시 반환하지 않고 추가적인 동작이 있다면 호출된 함수를 결과가 반환되기 전까지 계속해서 참조하고 있어야 하므로 함수 call stack에 stack frame이 계속해서 유지되어야 한다.
 이로 인해 재귀 함수의 경우 call stack에 stack frame이 지속적으로 쌓이게 되고 stack overflow가 발생 할 수 있게되며 불필요한 메모리 낭비가 생길 수 있다.
 
+하지만 함수를 즉시 반환하게 된다면 호출된 함수의 frame을 참조 할 필요가 없으므로 call stack에 유지시키지 않아도 무관하다.
+이처럼 꼬리 호출이 발생할 때 새로운 stack frame을 추가하지 않고 기존 frame을 재사용하여 성능을 향상시키는 최적화 기법이 꼬리 호출 최적화(Tail Call Optimization)이다.
+
 > ***- Stack Frame == Function Frame***
 > Stack Frame은 함수가 호출될 때 생성되는 실행 컨텍스트(Execution Context)이며, 호출 스택(Call Stack)에 저장되는 단위이다.
 > 환경에 따라 Function Frame이 Stack에 저장되지 않고 Heap에 저장 될 수 있으므로 반드시 Function Frame과 Stack Frame이 동일하지는 않다.
-
-하지만 함수를 즉시 반환하게 된다면 호출된 함수의 frame을 참조 할 필요가 없으므로 call stack에 유지시키지 않아도 무관하다.
-이처럼 꼬리 호출이 발생할 때 새로운 stack frame을 추가하지 않고 기존 frame을 재사용하여 성능을 향상시키는 최적화 기법이 꼬리 호출 최적화(Tail Call Optimization)이다.
 
 꼬리 호출 최적화는 모든 언어에서 지원되지는 않는다 아래 지원되는 언어와 지원되지 않는 언어들을 몇가지 정리해두겠다.
 ChatGPT가 말해준 목록이므로 정확하지 않을 수 있다.
