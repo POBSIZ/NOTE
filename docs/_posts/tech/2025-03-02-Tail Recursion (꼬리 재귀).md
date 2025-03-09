@@ -4,13 +4,9 @@ title: Tail Recursion (꼬리 재귀)
 categories:
   - tech
 tags:
-  - functional
-  - 함수형
   - recursion
   - 재귀
-  - 꼬리재귀
-  - TCO
-  - tail
+  - 재귀함수
 datetime: 2025-03-02T00:39:00
 ---
 # Tail Recursion == 꼬리 재귀
