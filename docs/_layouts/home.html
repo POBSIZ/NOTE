@@ -15,8 +15,8 @@ layout: default
       {%- for post in site.posts -%}
         {%- if post.is_index != true -%}
         <li>
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y %H:%M" -%}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          {%- assign date_format = "%b %-d, %Y %H:%M" -%}
+          <span class="post-meta">{{ post.datetime | date: date_format }}</span>
           <h3>
             <a class="post-link" href="{{ post.url | relative_url }}">
               {{ post.title | escape }}
@@ -26,7 +26,12 @@ layout: default
           <div>
             {% if post.tags %}
             {% for tag in post.tags %}
-            <span class="tag">{{ tag }}</span>
+            <a 
+              style="margin-right: 10px;"
+              href="{{ '/tags' | append: '?tag=' | append: tag | relative_url }}"
+            >
+              #{{ tag }}
+            </a>
             {% endfor %}
             {% endif %}
           </div>

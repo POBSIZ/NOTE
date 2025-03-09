@@ -47,14 +47,16 @@ permalink: /tags
       selectedTag = tag;
     }
 
-    const label = document.createElement("label");
-    label.htmlFor = radioInput.id;
-    label.innerText = "#" + tag[0].toUpperCase() + tag.slice(1);
+    if (tag[0]) {
+      const label = document.createElement("label");
+      label.htmlFor = radioInput.id;
+      label.innerText = "#" + tag[0]?.toUpperCase() + tag.slice(1);
 
-    filterValue.appendChild(radioInput);
-    filterValue.appendChild(label);
+      filterValue.appendChild(radioInput);
+      filterValue.appendChild(label);
 
-    return filterValue;
+      return filterValue;
+    }
   }
 
   // 게시글 목록을 출력하는 함수
@@ -82,7 +84,10 @@ permalink: /tags
     // 필터 목록 생성
     const tagFilter = document.getElementById("tag-filter");
     tagSet.forEach((tag) => {
-      tagFilter.appendChild(createFilterValue(tag));
+      const tagValueElement = createFilterValue(tag);
+      if (tagValueElement) {
+        tagFilter.appendChild(tagValueElement);
+      }
     });
 
     // 초기 표시
