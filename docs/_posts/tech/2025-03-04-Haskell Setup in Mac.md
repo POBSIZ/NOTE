@@ -3,7 +3,9 @@ layout: post
 title: Haskell Setup in Mac
 categories:
   - tech
-tags: 
+tags:
+  - haskell
+  - setup
 datetime: 2025-03-07T00:39:00
 ---
 # Haskell 세팅 완전 정복 in Mac
