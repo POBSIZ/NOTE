@@ -150,7 +150,7 @@ VSCode의 Haskell Extension은 업데이트도 꾸준히 되고 있고 (현재 �
 
 사실 중요 기능은 Extension이 아닌 HLS(Haskell Language Server)에서 제공 하는것이므로 HLS를 지원하는 IDE라면 모두 사용 가능하다.
 
-##### HLS (Haskell-Language-Server) 확인
+#### HLS (Haskell-Language-Server) 확인
 
 우선 내가 사용하는 GHC의 버전을 확인해야 한다.
 버전 확인 명령어는 아래와 같다.
@@ -184,11 +184,11 @@ ghc:            9.10.1
 > ghcup set ghc 9.10.1
 ```
 
-##### Extension 설치
+#### Extension 설치
 
 VSCode Extension Tab에 들어가서 "Haskell" 검색 후 Haskell에서 배포한 공식 Extension을 설치하면 된다.
 
-##### VSCode Extension 설정
+#### VSCode Extension 설정
 
 Command + Shift + P 를 입력하여 명령어 팔레트를 연 후
 "Preferences: Open User Settings (JSON)" 라고 입력 후 Enter
