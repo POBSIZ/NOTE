@@ -7,6 +7,11 @@ url: ""
 github_username: POBSIZ
 
 theme: minima
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme
+minima:
+  skin: dark 
 
 plugins:
   - jekyll-remote-theme
