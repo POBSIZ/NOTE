@@ -9,7 +9,7 @@ github_username: POBSIZ
 theme: minima
 # remote_theme: jekyll/minima
 minima:
-  skin: dark 
+  skin: dark
 
 plugins:
   - jekyll-remote-theme
