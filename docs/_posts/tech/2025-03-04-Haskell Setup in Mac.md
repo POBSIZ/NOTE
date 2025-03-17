@@ -199,23 +199,23 @@ Command + Shift + P 를 입력하여 명령어 팔레트를 연 후
 "haskell.serverExecutablePath": "/Users/[유저명]/.ghcup/bin/haskell-language-server-[버전]",
 ```
 
-```json
+```js
 {
-	...
-	
-	// ! Haskell 설정
-	// - LSP 실행 파일 설정 (GHC 9.10.1 사용)
-	"haskell.serverExecutablePath": "/Users/[username]/.ghcup/bin/haskell-language-server-9.10.1",
-	// - Editor 포맷 설정
-	"[haskell]": {
-		"editor.formatOnSave": true,
-		"editor.codeActionsOnSave": {
-		"source.fixAll": "always"
-	}
+  // ...
+  // ! Haskell 설정
+  // - LSP 실행 파일 설정 (GHC 9.10.1 사용)
+  "haskell.serverExecutablePath": "/Users/[username]/.ghcup/bin/haskell-language-server-9.10.1",
+  // - Editor 포맷 설정
+  "[haskell]": {
+    "editor.formatOnSave": true,
+      "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+    }
+  }
 }
 ```
 
-위 설정을 입력하고 저장을 한 뒤 다시 명령 팔레트를 열어 (Command + Shift + P) 아래와 같이 입력 한 후 Enter (HLS 서버 재시작)
+위 설정을 입력하고 저장을 한 뒤 다시 명령 팔레트를 열어 (Command + Shift + P) 아래와 같이 입력 한 후 Enter (HLS 재시작)
 
 ```plaintext
 Haskell: Restart Haskell LSP server
