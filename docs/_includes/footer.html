@@ -33,3 +33,18 @@
   </div>
 
 </footer>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title }}",
+    "description": "{{ page.description }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author }}"
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "image": "{{ page.image | default: 'https://example.com/default-image.jpg' }}"
+  }
+  </script>

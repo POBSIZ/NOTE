@@ -2,16 +2,16 @@
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-size: 0.8em;
-  color: #666;
+  color: $grey-color-light;
 
   .tags-label {
     margin-right: 0.5em;
   }
 
   a {
-    color: #666;
+    color: $grey-color-light;
     &:hover {
-      color: #000;
+      color: $text-color;
     }
   }
 }
@@ -20,16 +20,16 @@
   margin-top: 0.5em;
   margin-bottom: 0.5em;
   font-size: 0.8em;
-  color: #666;
+  color: $grey-color-light;
 
   .categories-label {
     margin-right: 0.5em;
   }
 
   a {
-    color: #666;
+    color: $grey-color-light;
     &:hover {
-      color: #000;
+      color: $text-color;
     }
   }
 }
@@ -40,7 +40,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  color: #666;
+  color: $grey-color-light;
   height: auto;
   margin-bottom: 2rem;
 
@@ -55,8 +55,8 @@
       display: none;
 
       &:checked + label {
-        background-color: #666;
-        color: #fff;
+        background-color: $grey-color-dark;
+        color: $text-color;
       }
     }
 
@@ -77,5 +77,5 @@
 // excerpt
 .excerpt {
   font-size: 1rem;
-  color: #666;
+  color: $grey-color;
 }
