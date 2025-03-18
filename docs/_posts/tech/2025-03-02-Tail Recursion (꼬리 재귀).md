@@ -12,7 +12,7 @@ datetime: 2025-03-02T00:39:00
 # Tail Recursion == 꼬리 재귀
 꼬리 재귀를 알기 위해선 꼬리 호출 (Tail Call) 에 대하여 알아야 한다.
 
-### Tail Call == 꼬리 호출
+## Tail Call == 꼬리 호출
 꼬리 호출은 함수의 마지막 동작으로 함수를 호출하고 즉시 반환하는 함수 호출 방식이다.
 아래 꼬리 호출이 존재하지 않는 그리고 존재하는 함수를 순서대로 정의 해보겠다.
 
@@ -40,7 +40,7 @@ function foo(n: number): number {
 }
 ```
 
-### Tail Call Optimization == 꼬리 호출 최적화
+## Tail Call Optimization == 꼬리 호출 최적화
 
 함수를 즉시 반환하지 않고 추가적인 동작이 있다면 호출된 함수를 결과가 반환되기 전까지 계속해서 참조하고 있어야 하므로 함수 call stack에 stack frame이 계속해서 유지되어야 한다.
 이로 인해 재귀 함수의 경우 call stack에 stack frame이 지속적으로 쌓이게 되고 stack overflow가 발생 할 수 있게되며 불필요한 메모리 낭비가 생길 수 있다.
@@ -79,7 +79,7 @@ ChatGPT가 말해준 목록이므로 정확하지 않을 수 있다.
 -	Go (TCO를 제공하지 않음)
 -	Rust (의도적으로 지원하지 않음)
 
-### Tail Recursion Function == 꼬리 재귀 함수
+## Tail Recursion Function == 꼬리 재귀 함수
 
 본론으로 돌아와 꼬리 재귀에 대해 설명해보겠다.
 

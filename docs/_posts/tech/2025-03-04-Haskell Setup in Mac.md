@@ -10,7 +10,7 @@ datetime: 2025-03-07T00:39:00
 ---
 # Haskell 세팅 완전 정복 in Mac
 
-### 작업 환경
+## 작업 환경
 
 - **OS**: macOS 14.2 23C64 arm64
 - **Host**: Mac14,2
@@ -18,7 +18,7 @@ datetime: 2025-03-07T00:39:00
 - **GPU**: Apple M2
 - **Memory**: 16384MiB
 
-### 1. GHCup (Glassgow-Haskell-Compiler-up) 설치
+## 1. GHCup (Glassgow-Haskell-Compiler-up) 설치
 
 GHCup은 GHC, Cabal, Stack 및 HLS(Haskell-Language-Server)를 쉽게 관리할 수 있도록 도와주는 도구이다.
 
@@ -137,7 +137,7 @@ If you are new to Haskell, check out https://www.haskell.org/ghcup/steps/
 # ghci 환경에 들어갔을 때 ":q" 를 입력하면 벗어날 수 있다.
 ```
 
-### 2. VSCode 설정
+## 2. VSCode 설정
 
 IDE는 Visual Studio Code 사용을 추천한다.
 대강 Haskell 사용자들의 IDE 사용 현황을 보니 emacs, vim, nvim, intelliJ 등이 있는것 같은데
@@ -150,7 +150,7 @@ VSCode의 Haskell Extension은 업데이트도 꾸준히 되고 있고 (현재 �
 
 사실 중요 기능은 Extension이 아닌 HLS(Haskell Language Server)에서 제공 하는것이므로 HLS를 지원하는 IDE라면 모두 사용 가능하다.
 
-#### HLS (Haskell-Language-Server) 확인
+## HLS (Haskell-Language-Server) 확인
 
 우선 내가 사용하는 GHC의 버전을 확인해야 한다.
 버전 확인 명령어는 아래와 같다.
@@ -184,11 +184,11 @@ ghc:            9.10.1
 > ghcup set ghc 9.10.1
 ```
 
-#### Extension 설치
+## Extension 설치
 
 VSCode Extension Tab에 들어가서 "Haskell" 검색 후 Haskell에서 배포한 공식 Extension을 설치하면 된다.
 
-#### VSCode Extension 설정
+## VSCode Extension 설정
 
 Command + Shift + P 를 입력하여 명령어 팔레트를 연 후
 "Preferences: Open User Settings (JSON)" 라고 입력 후 Enter
