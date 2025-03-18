@@ -16,7 +16,7 @@ $text-color: #e8e8e8 !default;
 $background-color: #2a2a2a !default;
 $brand-color: #4898ff !default;
 $brand-color-light: lighten($brand-color, 15%) !default;
-$brand-color-darken: lighten($brand-color, 15%) !default;
+$brand-color-darken: darken($brand-color, 15%) !default;
 
 $grey-color: #aaaaaa !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
