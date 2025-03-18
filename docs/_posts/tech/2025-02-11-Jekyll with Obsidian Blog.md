@@ -36,7 +36,7 @@ datetime: 2025-02-11T00:52:00
 
 ## 환경
 
-![프로젝트 구조]({{site.url}}/assets/IMG_1719.jpeg)
+![프로젝트 구조](https://pobsiz.github.io/NOTE/assets/IMG_1719.jpeg)
 
 위의 "docs" 경로는 Jekyll 프로젝트의 폴더 경로이며 아래 "personal" 경로는 개인 기록을 저장해두는 경로이다. Vault를 Github repository와 iCloud에 올려둔 상태이며 .gitignore에 개인 기록을 추가해두어 개인 기록은 외부에 노출이 안되도록 처리해두었다.
 
