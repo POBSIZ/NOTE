@@ -79,3 +79,10 @@
   font-size: 1rem;
   color: $grey-color;
 }
+
+// rss-subscribe
+.rss-subscribe {
+  a {
+    text-decoration: underline;
+  }
+}
