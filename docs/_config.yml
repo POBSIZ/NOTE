@@ -2,8 +2,8 @@ title: Won's Blog
 email: gjehdtjr911@gmail.com
 description: >-
   Blog.
-baseurl: "/NOTE"
-url: ""
+# baseurl: ""
+url: "https://pobsiz.github.io"
 github_username: POBSIZ
 
 theme: minima

@@ -19,7 +19,7 @@
         <div class="trigger">
           {% assign categories = site.posts | map: "categories" | uniq %} 
           {% for category in categories %}
-          <a class="page-link" href="/NOTE/{{ category }}">{{ category | capitalize }}</a>
+          <a class="page-link" href="/{{ category }}">{{ category | capitalize }}</a>
           {% endfor %}
         </div>
       </nav>
