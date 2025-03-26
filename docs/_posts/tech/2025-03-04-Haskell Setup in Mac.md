@@ -195,7 +195,7 @@ Command + Shift + P 를 입력하여 명령어 팔레트를 연 후
 설정 JSON 파일이 열리면 JSON 내부에 아래 내용을 붙여넣으면 된다.
 
 ```json
-"haskell.serverExecutablePath": "/Users/[유저명]/.ghcup/bin/haskell-language-server-wrapper",
+"haskell.serverExecutablePath": "/Users/[유저명]/.ghcup/bin/haskell-language-server-wrapper"
 ```
 
 ```js
