@@ -194,16 +194,11 @@ Command + Shift + P 를 입력하여 명령어 팔레트를 연 후
 "Preferences: Open User Settings (JSON)" 라고 입력 후 Enter
 설정 JSON 파일이 열리면 JSON 내부에 아래 내용을 붙여넣으면 된다.
 
-```js
-// JSON
-{
-  // ...
-  // ! Haskell 설정
-  "haskell.serverExecutablePath": "/Users/[username]/.ghcup/bin/haskell-language-server-wrapper",
-  "haskell.plugin.semanticTokens.globalOn": true,
-  "editor.semanticTokenColorCustomizations": {
-    "enabled": true
-  }
+```json
+"haskell.serverExecutablePath": "/Users/[username]/.ghcup/bin/haskell-language-server-wrapper",
+"haskell.plugin.semanticTokens.globalOn": true,
+"editor.semanticTokenColorCustomizations": {
+	"enabled": true
 }
 ```
 
