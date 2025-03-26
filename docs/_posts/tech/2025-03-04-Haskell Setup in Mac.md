@@ -204,6 +204,10 @@ Command + Shift + P 를 입력하여 명령어 팔레트를 연 후
   // ...
   // ! Haskell 설정
   "haskell.serverExecutablePath": "/Users/[username]/.ghcup/bin/haskell-language-server-wrapper",
+  "haskell.plugin.semanticTokens.globalOn": true,
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true
+  }
 }
 ```
 
