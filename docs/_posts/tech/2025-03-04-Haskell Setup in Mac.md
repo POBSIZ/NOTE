@@ -193,25 +193,17 @@ VSCode Extension Tab에 들어가서 "Haskell" 검색 후 Haskell에서 배포�
 Command + Shift + P 를 입력하여 명령어 팔레트를 연 후
 "Preferences: Open User Settings (JSON)" 라고 입력 후 Enter
 설정 JSON 파일이 열리면 JSON 내부에 아래 내용을 붙여넣으면 된다.
-경로와 HLS의 버전은 각자에 맞게 수정하여야 한다.
 
 ```json
-"haskell.serverExecutablePath": "/Users/[유저명]/.ghcup/bin/haskell-language-server-[버전]",
+"haskell.serverExecutablePath": "/Users/[유저명]/.ghcup/bin/haskell-language-server-wrapper",
 ```
 
 ```js
+// JSON
 {
   // ...
   // ! Haskell 설정
-  // - LSP 실행 파일 설정 (GHC 9.10.1 사용)
-  "haskell.serverExecutablePath": "/Users/[username]/.ghcup/bin/haskell-language-server-9.10.1",
-  // - Editor 포맷 설정
-  "[haskell]": {
-    "editor.formatOnSave": true,
-      "editor.codeActionsOnSave": {
-    "source.fixAll": "always"
-    }
-  }
+  "haskell.serverExecutablePath": "/Users/[username]/.ghcup/bin/haskell-language-server-wrapper",
 }
 ```
 
